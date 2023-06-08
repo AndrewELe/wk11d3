@@ -1,0 +1,53 @@
+#1 express is a minimalist designed web framework, it is utilized to allow for fast and efficient coding and development of a web server and cuts the required time of coding down to a manageable minimum, node.js is a runtime environment which means it carries with it a collection of web API's and a javascript engine that allows it to be versatile, fast and easy to use.
+
+#2 mongoose allows for the developer to seamlessly access and work with mongoDB, it essentially creates a schema for you to easily create RESTful apps.
+
+#3 mongoose helps in making sure the post requests of data are congruent with its own schema and pushing it to the monogDB, also mongoose helps to translate the monoDB objects so that JS and the web app can utilize them. It helps to create models on a specific schema so that monoDB can use the objects created
+
+#4 a software design pattern is a straightforward, easily repeatable solution to commonly occurring problem. It is specifically a template to utilize to achieve a solution, for example an MVC software design utilizes the convention that separate files contain functions for models, views, and controls allowing for easily maintainable code that can be quickly updated.
+
+#5 MVC essentially separates the application into three main components. Each component is tasked with handling specific aspects of the applications function
+
+#6 models - identifies and updates applications reflections of changes to the data structure, view - defines UI displays and changes in accordance to the user's actions, Controllers - contains the logic for the appropriate actionable steps in the application
+
+#7 throughput is the number of packets that are being sent to the server and sent back to the client, latency is the time it takes for those pockets to be received. 
+
+#8 its important to maximize throughput and minimize latency because it allows for a better user experience.
+
+#9 authentication refers to the token and keys that allow a user to interact with a specific part of a website, without them the user will have limited or no ability to take certain actions on the website.
+
+#10 the authorization process begins with a hashing of the users specific website password, the encrypted password is than passed as a hash to an api that then creates a token so that the user can continue using aspects of the application or website without having to continually entering in a password
+
+#11 express.static allows the developer to deliver files that are pre-built and stored on the web server
+
+#12 the code for express.static would like this express.static(root, [options]), where root is the path in which the asset is located and options are the developer defined parameters (such as files, the whole path being public, etc)
+
+#13 jest is effectively an api that runs the test upon command
+
+#14 supertest allows for the interaction between jest and the built API
+
+#15 manual testing is doing CRUD requests to the server one click at a time with implementing those requests in singular actions. Automated testing allows for the use to create a script that does the CRUD requests and testing without developer input.
+
+#16 unit testing deals with testing specific blocks of code as individual and stand alone parts. Integration try grouping together testing works with combining together modules of code and testing them all together, end-to-end testing is the idea of taking the entire application that has been built and testing it from the beginning of the user interaction all the way to the end of the user interaction
+
+#17 regression testing and smoke testing are fairly similar in their outcomes. But the fundamental difference are
+	smoke testing is done it is intended to be a relatively fast test through the development process to ensure core functionalities like install and launch, visual design or the GUI, and overall responsiveness of the key functions, it is also designed to ensure that bugs are found early on in the software development phase.
+	regression testing also is done to find fundamental bugs in the application but the main difference being that with regressive testing we are looking for software performance after new code has been added and that no prior features are impacted by the new additions
+	functional testing testing is testing that the software simply works whereas performance testing checks if the application continues to work under increasing demands that the testing engineer determines within expected extreme perameters.
+
+#18 positive testing ensures that the application functions and works within the parameters in which it is designed for. Negative testing is designed to check if the application will fail "gracefully" given invalid inputs or unexpected user behavior.
+
+#19 load testing checks the continued functionality of the application with increasing number of users accessing the application with the expected inputs and use cases
+
+#20 usability testing asses UX/UI design and how the user reacts to the application, it is a determination of the flor and user comfort or discomfort with the GUI
+
+#21 security testing is critical in the development life cycle because of the importance to keep user information and identity anonymous and safe before deployment. It helps to prevent customer distrust and serious data breaches. 
+
+#22 compatibility testing works to ensure cross platform functionality.
+
+#23 recovery testing purposefully fails the application in a controlled environment to ensure that the agreed functionality remains available with appropriate response times and that data is not lost or corrupted.
+
+#24 acceptance testing is usually done by an end user, customer or stakeholder to establish confidence and overall validation of the system and application.
+
+#25 to begin as I write the code for the particular application I would be doing unit testing, to make sure variables are properly scoped and declared and functions and classes are working as expected. As the program becomes more developed I would take time to do integrated testing to make sure a chain of functions that cause a particular single output is functioning properly. 
+	id finally attempt to do smoke testing in efforts to ensure some level of redundancy before moving on to the next chunk and repeating the aforementioned testing cycle. Ones the application s completed id go end-to-end and do attempt to also check overall performance and load tests (this may occur earlier in the cycle depending on the size of the application itself. After end to end is completed id take the application and pass it on for some UI and UX testing to ensure its ease of use or clear communication. hopefully throughout the process security was in mind and if not at this point I would do some regression testing to implement levels of security if it is required of the application. If the application requires to be multi platform I would then take the entire software and attempt to port it to other platforms of compatibility. Lastly at this point id would begin positive and negative testing and do regressive code to ensure its optimal performance before delivering it to client for final user acceptance. 
