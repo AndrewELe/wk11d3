@@ -12,7 +12,7 @@ exports.listToDo = async (req,res) => {
 exports.createToDo = async (req, res) => {
     try {
         const createToDo = new toDoModel(req.body)
-        await toDoModel.save()
+        await createToDo.save()
     } catch (error) {
         res.status(400).send({ message: error.message })
     }
