@@ -11,4 +11,5 @@ scenarios:
             title: "eat chicken"
             description: "go and eat chicken"
             completed: false
-      
+      - get:
+          url: "/todos"

@@ -35,7 +35,7 @@ exports.updateToDo = async (req, res) => {
         const toDoItem = await toDoModel.findOne({ _id: req.params.id })
         updates.forEach(update => toDoItem[update] = req.body[update])
         await toDoItem.save()
-        res.status(200).json({ toDoItem, messages: 'to do item has been updated' })
+        res.json({ message: 'to do item has been updated' })
     } catch (error) {
         res.status(400).send({ message: error.message })
     }

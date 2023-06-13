@@ -54,11 +54,7 @@ describe('Testing todo endpoints', () => {
         const toDo = new ToDo({ title: 'hot chicken', description: 'test', completed: false})
         await toDo.save()
         
-        const response = await request(app)
-        .put(`/todos/${toDo.id}`)
-        .send({ title: 'hot turkey', description: 'test description 2', completed: true })
-
-        console.log(toDo.body)
+        const response = await request(app).put(`/todos/${toDo.id}`).send({ title: 'hot turkey', description: 'test description 2', completed: true })
 
         expect(response.statusCode).toBe(200)
         expect(response.body.message).toBe('to do item has been updated')
