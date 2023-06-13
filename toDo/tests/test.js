@@ -63,7 +63,7 @@ describe('Testing todo endpoints', () => {
     })
 
     test('It should delete the user', async ()=>{
-        const toDo = new ToDo.send({ title: 'hot chicken', description: 'test', completed: false})
+        const toDo = new ToDo({ title: 'hot chicken', description: 'test', completed: false})
         await toDo.save() 
         const response = await request(app)
         .delete(`/todo/${todo.id}`)
