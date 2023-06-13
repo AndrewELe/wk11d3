@@ -6,8 +6,9 @@ config:
 scenarios:
   - flow:
       - post:
-          url: "/"
+          url: "/todos"
           json:
             title: "eat chicken"
             description: "go and eat chicken"
             completed: false
+      

@@ -5,6 +5,6 @@ const app = express()
 
 app.use(express.json())
 app.use(morgan('combined'))
-app.use('/', toDoRoutes)
+app.use('/todos', toDoRoutes)
 
 module.exports = app

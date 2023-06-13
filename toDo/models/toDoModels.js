@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const toDoSchema = new mongoose.Schema({
     title:{type:String, require:true},
-    description:{type:String},
+    description: String,
     completed:{type:Boolean, default:false},
     created_at:{type:Date, default:Date.now()}
 })

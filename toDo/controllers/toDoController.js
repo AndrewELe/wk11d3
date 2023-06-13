@@ -13,6 +13,8 @@ exports.createToDo = async (req, res) => {
     try {
         const createToDo = new toDoModel(req.body)
         await createToDo.save()
+        res.send(createToDo);
+ 
     } catch (error) {
         res.status(400).send({ message: error.message })
     }
@@ -31,16 +33,21 @@ exports.updateToDo = async (req, res) => {
     try {
         const updates = Object.keys(req.body)
         const toDoItem = await toDoModel.findOne({ _id: req.params.id })
-        updates.forrEach((update) => (toDoItem[update] = req.body[update]))
-        await toDoModel.save()
+        updates.forEach(update => toDoItem[update] = req.body[update])
+        await toDoItem.save()
+        res.status(200).json({ toDoItem, messages: 'to do item has been updated' })
     } catch (error) {
-        res.status(400).send({ message:error.message })
+        res.status(400).send({ message: error.message })
     }
 }
 
 exports.deleteToDo = async (req, res) => { 
     try {
-        await req.toDoModel.deleteOne()
+        const todoItem = await toDoModel.findOne({ _id:req.params.id})
+        const result = await todoItem.deleteOne()
+        if (result.deleteCount === 1) {
+            console.log('sucess deleted')
+        }
         res.json({ message: 'item deleted successfully'})
     } catch (error) {
         res.status(400).json({ message: error.message })

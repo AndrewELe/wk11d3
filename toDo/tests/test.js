@@ -22,51 +22,52 @@ describe('Testing todo endpoints', () => {
 
     test('this should test listing', async () => {
         const response = await request(app)
-        .get('/')
+        .get('/todos')
 
         expect(response.body).toMatchObject({})
     })
 
     test('this should test creating todo', async () => {
         const response = await request(app)
-        .post('/createToDo')
+        .post('/todos')
         .send({ title: 'checking test title', description: 'test description', completed: true })
-        
-        console.log('!!!!!!!!!!!!!!!!!!!!!!')
-        console.log(response.body.title)
-        expect(response.body.title).toEqual('checking test title')
 
+        expect(response.body.title).toEqual('checking test title')
+        expect(response.body.description).toEqual('test description')
+        expect(response.body.completed).toEqual(true)
+        expect(response.body).toHaveProperty('created_at')
     })
 
     test('this should test getting a specific item', async () => {
         const todo = new ToDo ({
-            title: 'checking test title', description: 'test description', completed: true
+            title: 'checking test title specifically', description: 'test description specfically', completed: true
         })
         await todo.save()
+        const response = await request(app).get(`/todos/${todo.id}`)
 
-        const response = await request(app)
-        //.post('/getToDo')
-        .put(`/getToDo/${toDo.id}`)
-
-        expect(response.body.todo.title).toEqual('checking test title')
+        expect(response.body.title).toEqual('checking test title specifically')
+        expect(response.body.description).toEqual('test description specfically')
+        expect(response.body).toHaveProperty('created_at')
     })
 
     test('this needs to update a todo item', async () => {
-        const toDo = new ToDo.send({ title: 'hot chicken', description: 'test', completed: false})
+        const toDo = new ToDo({ title: 'hot chicken', description: 'test', completed: false})
         await toDo.save()
         
-        const response = await request(app) 
-        .put(`/todo/${user.id}`)
-        .send({ title: 'hot chicken', description: 'test', completed: false})
-          
+        const response = await request(app)
+        .put(`/todos/${toDo.id}`)
+        .send({ title: 'hot turkey', description: 'test description 2', completed: true })
+
+        console.log(toDo.body)
+
         expect(response.statusCode).toBe(200)
+        expect(response.body.message).toBe('to do item has been updated')
     })
 
     test('It should delete the user', async ()=>{
         const toDo = new ToDo({ title: 'hot chicken', description: 'test', completed: false})
         await toDo.save() 
-        const response = await request(app)
-        .delete(`/todo/${todo.id}`)
+        const response = await request(app).delete(`/todos/${toDo.id}`)
 
         expect(response.body.message).toEqual('item deleted successfully')
       })

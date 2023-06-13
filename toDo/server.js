@@ -10,5 +10,3 @@ mongoose.connection.once('open', () => console.log('Mongo is ALIVE'));
 const server = app.listen(PORT, () => {
   console.log(`Ready to go ${PORT}`);
 });
-
-module.exports = {app,server}
