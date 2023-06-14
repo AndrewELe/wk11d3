@@ -18,7 +18,7 @@ afterAll(async () => {
     server.close()
 })
 
-describe('Testing todo endpoints', () => {
+describe('Testing todo endpoints (positive testing methods)', () => {
 
     test('this should test listing', async () => {
         const response = await request(app)
@@ -60,7 +60,7 @@ describe('Testing todo endpoints', () => {
         expect(response.body.message).toBe('to do item has been updated')
     })
 
-    test('It should delete the user', async ()=>{
+    test('It should delete the todo listing', async ()=>{
         const toDo = new ToDo({ title: 'hot chicken', description: 'test', completed: false})
         await toDo.save() 
         const response = await request(app).delete(`/todos/${toDo.id}`)
@@ -68,3 +68,4 @@ describe('Testing todo endpoints', () => {
         expect(response.body.message).toEqual('item deleted successfully')
       })
 })
+
