@@ -31,6 +31,10 @@ exports.getToDo = async (req, res) => {
 
 exports.updateToDo = async (req, res) => {
     try {
+        // if (toDoItem.title === undefined) {
+        //     res.json({ message: 'Please enter valid value pairs'})
+        // }
+
         const updates = Object.keys(req.body)
         const toDoItem = await toDoModel.findOne({ _id: req.params.id })
         updates.forEach(update => toDoItem[update] = req.body[update])
