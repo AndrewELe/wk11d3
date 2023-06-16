@@ -82,6 +82,10 @@ function coinFlips(inputNum) {
 
   function flipTester(inputNum , outputArray, currentState) {
     // case of one flip of a coin
+
+    /*
+    take the other two paramaters and define them as their own variables scoped to the function
+    */
     if (inputNum === 1) {
       outputArray.push(current + 'H')
       outputArray.push(current + 'T')
