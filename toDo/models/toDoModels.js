@@ -1,31 +1,12 @@
 const mongoose = require('mongoose')
 
 const toDoSchema = new mongoose.Schema({
-    title:{type:String, require:true},
-    description: String,
-    completed:{type:Boolean, default:false},
+    title:{type:String, required:[true, 'Use a title']}, // required: true is an inbuilt mongo validator
+    description: {type:String, required: [true,'You must include a description']}, 
+    completed:{type:Boolean, default:false, required: [true, 'You must indicate completion of status true or false']},
     created_at:{type:Date, default:Date.now()}
 })
 
 const ToDo = mongoose.model('ToDo', toDoSchema)
-
-
-ToDo.schema.path('completed').validate(function (value) {
-    if (typeof value !== 'boolean') {
-        throw new Error('completed field must be a boolean')
-    }
-})
-
-ToDo.schema.path('title').validate(function (value) {
-    if (typeof value !== 'string') {
-        throw new Error('title field must be a string')
-    }
-})
-
-ToDo.schema.path.path('description').validate(function (value) {
-    if (typeof value !== 'string') {
-        throw new Error('description field must be a string')
-    }
-})
 
 module.exports = ToDo

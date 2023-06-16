@@ -11,7 +11,6 @@ exports.listToDo = async (req,res) => {
 
 exports.createToDo = async (req, res) => {
     try {
-        
         const createToDo = new toDoModel(req.body)
         await createToDo.save()
         res.send(createToDo);

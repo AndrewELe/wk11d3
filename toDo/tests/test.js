@@ -69,3 +69,46 @@ describe('Testing todo endpoints (positive testing methods)', () => {
       })
 })
 
+
+//testing for edge cases
+// describe('Testing todo endpoints (negative testing methods)', () => { 
+
+//     test('this should test creating todo with invalid json body', async () => {
+//         const response = await request(app)
+//         .post('/todos')
+//         .send({ description: 'test description', completed: true})
+
+//         expect(response.statusCode).toBe(400)
+//     })
+
+//     // test('this test attempts getting a specific item with invalid id', async () => {
+//     //     const response = await request(app).get(`/todos/123`)
+
+//     //     expect(response.statusCode).toBe(400)
+//     //     expect(response.body.message).toBe('invalid id')
+//     // })
+
+//     // test('this test atttempts update a todo item with invalid id', async () => {
+//     //     const response = await request(app).put(`/todos/123`).send({ title: 'hot turkey', description: 'test description 2', completed: true })
+
+//     //     expect(response.statusCode).toBe(400)
+//     //     expect(response.body.message).toBe('invalid id')
+//     // })
+
+//     // test('this test attempts update a todo item with invalid json body', async () => {
+//     //     const toDo = new ToDo({ title: 'hot chicken', description: 'asfdasdf', completed: false})
+//     //     await toDo.save()
+        
+//     //     const response = await request(app).put(`/todos/${toDo.id}`).send({ description: 'test description 2', completed: true })
+
+//     //     expect(response.statusCode).toBe(400)
+//     //     expect(response.body.message).toBe('values entered do not match required format')
+//     // })
+
+//     // test('this test attempts delete a todo item with invalid id', async () => {
+//     //     const response = await request(app).delete(`/todos/123`)
+
+//     //     expect(response.statusCode).toBe(400)
+//     //     expect(response.body.message).toBe('invalid id')
+//     // })
+// })
