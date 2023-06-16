@@ -14,7 +14,7 @@
 ## there seems to be timeout errors when loading higher number of scenarios which indicate that improvements to the code could be made to compensate for higher loads. see attached: 
 
 <br>All virtual users finished<br>
-Summary report @ 21:18:13(-0400) 2023-06-15 /
+<br> Summary report @ 21:18:13(-0400) 2023-06-15 <br>
   Scenarios launched:  1200
   Scenarios completed: 359
   Requests completed:  1180
