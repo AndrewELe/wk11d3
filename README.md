@@ -1,19 +1,19 @@
-## technologies used
-# --------------------
-# technologies used include javascript, monogoDB, mongoDB-Memory-Server, mongoose, express, jest, supertest, morgan, nodemon, and finally 
+# technologies used
+## --------------------
+## technologies used include javascript, monogoDB, mongoDB-Memory-Server, mongoose, express, jest, supertest, morgan, nodemon, and finally 
 
-## explination of design
-# --------------------
-# the design of the project is built under the CRUD and MVC guidelines. Efforts were made to parse out and group specfic functionality into its own files for futre maintenence, ease of altercation and updating, and clean DRY code
+# explination of design
+## --------------------
+## the design of the project is built under the CRUD and MVC guidelines. Efforts were made to parse out and group specfic functionality into its own files for futre maintenence, ease of altercation and updating, and clean DRY code
 
-## how to run
-# --------------------
-# to run the project download the file path "todo", load the required node_modules indicated by the package.json file and include your own mongoDB connection in an .env file in the root path of the project. After these steps npm run dev to start the api on port 3000 and npm run test/load to check for functionality of the api project.
+# how to run
+## --------------------
+## to run the project download the file path "todo", load the required node_modules indicated by the package.json file and include your own mongoDB connection in an .env file in the root path of the project. After these steps npm run dev to start the api on port 3000 and npm run test/load to check for functionality of the api project.
 
-## discussion of load test results
-# there seems to be timeout errors when loading higher number of scenarios which indicate that improvements to the code could be made to compensate for higher loads. see attached: 
+# discussion of load test results
+## there seems to be timeout errors when loading higher number of scenarios which indicate that improvements to the code could be made to compensate for higher loads. see attached: 
 
-All virtual users finished
+<br>All virtual users finished<br>
 Summary report @ 21:18:13(-0400) 2023-06-15
   Scenarios launched:  1200
   Scenarios completed: 359
