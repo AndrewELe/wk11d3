@@ -15,19 +15,19 @@
 
 <br>All virtual users finished<br>
 <br> Summary report @ 21:18:13(-0400) 2023-06-15 <br>
-  Scenarios launched:  1200
-  Scenarios completed: 359
-  Requests completed:  1180
-  Mean response/sec: 27.89
-  Response time (msec):
-    min: 12
-    max: 9988
-    median: 73.5
-    p95: 8772.5
-    p99: 9579
-  Scenario counts:
-    0: 1200 (100%)
-  Codes:
-    200: 1180
-  Errors:
-    ETIMEDOUT: 841
+  Scenarios launched:  1200 ||
+  Scenarios completed: 359 ||
+  Requests completed:  1180 ||
+  Mean response/sec: 27.89 ||
+  Response time (msec): ||
+    min: 12 ||
+    max: 9988 ||
+    median: 73.5 ||
+    p95: 8772.5 ||
+    p99: 9579 ||
+  Scenario counts: ||
+    0: 1200 (100%) ||
+  Codes: ||
+    200: 1180 ||
+  Errors: ||
+    ETIMEDOUT: 841 ||
