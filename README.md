@@ -11,7 +11,8 @@
 ## to run the project download the file path "todo", load the required node_modules indicated by the package.json file and include your own mongoDB connection in an .env file in the root path of the project. After these steps npm run dev to start the api on port 3000 and npm run test/load to check for functionality of the api project.
 
 # discussion of load test results
-## there seems to be timeout errors when loading higher number of scenarios which indicate that improvements to the code could be made to compensate for higher loads. see attached: 
+## there seems to be timeout errors when loading higher number of scenarios which indicate that improvements to the code could be made to compensate for higher loads. <br>
+## see attached: 
 
 <br>All virtual users finished<br>
 <br> Summary report @ 21:18:13(-0400) 2023-06-15 <br>
