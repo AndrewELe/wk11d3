@@ -7,17 +7,17 @@
 ## the design of the project is built under the CRUD and MVC guidelines. Efforts were made to parse out and group specfic functionality into its own files for futre maintenence, ease of altercation and updating, and clean DRY code.
 
 ## user can post (create), put (update or change), get (capture a specific todo item), delete and list todo items
-## root path = /todos
-## get path = /todos/:id
-## put path = /todos/:id
-## delete path = /todos/:id
+### root path = /todos
+### get path = /todos/:id
+### put path = /todos/:id
+### delete path = /todos/:id
 
-## json body must include 
-## {
-## title: "(title as a string)",
-## description: "(description as a string)",
-## completed: boolean value
-## }
+### json body must include 
+### {
+### title: "(title as a string)",
+### description: "(description as a string)",
+### completed: boolean value
+### }
 
 # how to run
 ## --------------------
@@ -45,3 +45,6 @@
     200: 1180 ||
   Errors: ||
     ETIMEDOUT: 841 ||
+
+# other notes on API and recursion practice
+## there was some difficulties understanding and coding for the prevention for the user to update a todo item without the required json parameters. Also coding for all possible letter combinations proved to be difficult and i ran out of time before final submissions, I was able to code for final sets of letter combinations (much like doing an anagram finder) but ran into errors coding for single and double combinations. 
