@@ -6,8 +6,11 @@
 ## --------------------
 ## the design of the project is built under the CRUD and MVC guidelines. Efforts were made to parse out and group specfic functionality into its own files for futre maintenence, ease of altercation and updating, and clean DRY code.
 
-## root path = /todos
 ## user can post (create), put (update or change), get (capture a specific todo item), delete and list todo items
+## root path = /todos
+## get path = /todos/:id
+## put path = /todos/:id
+## delete path = /todos/:id
 
 ## json body must include 
 ## {
