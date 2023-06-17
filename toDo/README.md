@@ -1,10 +1,20 @@
 # technologies used
 ## --------------------
-## technologies used include javascript, monogoDB, mongoDB-Memory-Server, mongoose, express, jest, supertest, morgan, nodemon, and finally 
+## technologies used include javascript, monogoDB, mongoDB-Memory-Server, mongoose, express, jest, supertest, morgan, nodemon, and finally dotenv
 
 # explination of design
 ## --------------------
-## the design of the project is built under the CRUD and MVC guidelines. Efforts were made to parse out and group specfic functionality into its own files for futre maintenence, ease of altercation and updating, and clean DRY code
+## the design of the project is built under the CRUD and MVC guidelines. Efforts were made to parse out and group specfic functionality into its own files for futre maintenence, ease of altercation and updating, and clean DRY code.
+
+## root path = /todos
+## user can post (create), put (update or change), get (capture a specific todo item), delete and list todo items
+
+## json body must include 
+## {
+## title: "(title as a string)",
+## description: "(description as a string)",
+## completed: boolean value
+## }
 
 # how to run
 ## --------------------
